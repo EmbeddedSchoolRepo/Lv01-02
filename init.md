@@ -26,3 +26,19 @@ https://github.com/EmbeddedSchoolRepo/Lv01-02 로 이동합니다.
 7. git clone https://github.com/EmbeddedSchoolRepo/Lv01-02.git
 8. ls
 ```
+
+## 숙제 제출하는 방법(깃 활용)
+```make
+1. 현재 모두 위의 작업을 통해 저장소를 가지고 있을겁니다.
+2. git config --list 를 통해 현재 저장소의 git name과 email을 확인합니다.
+3. git config --global user.name "깃사용자명"
+4. git config --global user.email "깃가입메일"
+5. git config --list 를 통해 정상적으로 처리가 되었는지 확인합니다.
+6. 그리고 여러분들의 이름에 해당하는 디렉토리로 이동해서 작업(숙제) 등을 진행합니다.
+7. git status 를 입력하면 현재 상태를 알 수 있습니다.
+8. 여기서 빨간색으로 나오는 정보들을 git add 형태로 추가하면 됩니다.
+9. 이후 git commit "숙제 1회차(이름)" 형식으로 제출하면 되겠습니다.
+10. commit 이후에 git push origin main 으로 여러분들 각자의 사본 저장소에 저장합니다.
+11. 개인 사본 저장소에 가보면 Pull Request를 눌러서 PR 요청을 넣으면 완료입니다.
+12. 
+```
