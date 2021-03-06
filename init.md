@@ -40,5 +40,7 @@ https://github.com/EmbeddedSchoolRepo/Lv01-02 로 이동합니다.
 9. 이후 git commit "숙제 1회차(이름)" 형식으로 제출하면 되겠습니다.
 10. commit 이후에 git push origin main 으로 여러분들 각자의 사본 저장소에 저장합니다.
 11. 개인 사본 저장소에 가보면 Pull Request를 눌러서 PR 요청을 넣으면 완료입니다.
-12. 
+12. 이후 제가 승인하면 원본 저장소에 내용이 갱신됩니다.
 ```
+
+
