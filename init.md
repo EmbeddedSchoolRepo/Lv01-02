@@ -16,9 +16,13 @@ https://github.com/EmbeddedSchoolRepo/Lv01-02 로 이동합니다.
 아래 절차를 따라서 작업을 진행해주세요.  
 
 1. 홈페이지에서 fork를 눌러서 자신의 계정으로 내용을 가져옵니다.
-2. git clone 저장소
-3. 
 
 ```make
-
+2. cd ~
+3. mkdir proj
+4. cd proj
+5. mkdir es02
+6. cd es02
+7. git clone https://github.com/EmbeddedSchoolRepo/Lv01-02.git
+8. ls
 ```
