@@ -31,12 +31,13 @@ int main()
 	assert(problem3() == 198);
 	assert(problem3_loop() == 198);
 
-	assert(problem4() == 4233);
-	assert(problem4_loop() == 4233);
+	assert(problem4() == 1);
+	assert(problem4_loop() == 1);
 
 	assert(problem5() == 55);
 
-	assert(problem6() == 5);
+	assert(problem6() == 1251);
+
 	printf("Perfect !! \n");
 
 	return 0;
@@ -52,7 +53,7 @@ int printOddNumber(int range)
 	{
 		return 0;
 	}
-4
+
 	for (i = 0; i < range; i++)
 	{
 		if (i % 2 == 1)
@@ -166,7 +167,7 @@ int fibonacciNumbers(int index)
 		result = number1 + number2;
 		number1 = number2;
 		number2 = result;
-4	}	
+	}	
 
 	return result;
 }
@@ -178,7 +179,7 @@ int sequenceNumber(int index)
 	int number2 = 1;
 	int number3 = 1;
 	int number4 = 1;
-4	int i;
+	int i;
 
 	if (index <= 0)
 	{
@@ -241,20 +242,31 @@ int problem3(void)
 
 int problem4(void)
 {
-	int result = 0;
+	int result1 = 0;
+	int result2 = 0;
+	
+	result1 = multipleSum(100, 2); 
+	result2 = multipleSum(100, 3);
 
-	result = multipleSum(100, 2) + multipleSum(100, 3);
-
-	return result;
+	
+	printf("1 ~ 100 까지 2의 배수의 합 : %d \n", result1);
+	printf("1 ~ 100 까지 3의 배수의 합 : %d \n", result2);
+	
+	return 1;
 }
 
 int problem4_loop(void)
 {
-	int result = 0;
+	int result1 = 0;
+	int result2 = 0;
 
-	result = multipleSumLoop(100, 2) + multipleSumLoop(100, 3);
+	result1 = multipleSumLoop(100, 2); 
+	result2 = multipleSumLoop(100, 3);
 
-	return result;
+	printf("1 ~ 100 까지 2의 배수의 합 : %d \n", result1);
+	printf("1 ~ 100 까지 3의 배수의 합 : %d \n", result2);
+
+	return 1;
 }
 
 int problem5(void)
@@ -271,7 +283,7 @@ int problem6(void)
 {
 	int result = 0;
 
-	result = sequenceNumber(8);
+	result = sequenceNumber(25);
 
 	return result;
 }
