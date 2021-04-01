@@ -13,12 +13,12 @@ int problem2_loop(void);
 int problem3_loop(void);
 int problem4_loop(void);
 
-int printOddNumber(int range);
+int printOddNumber(const int range);
 int continousSum(const int range);
 int continousSumLoop(const int range);
 int multipleSum(const int range, const int multiple);
 int multipleSumLoop(const int range, const int multiple);
-int fibonacciNumbers(int index);
+int fibonacciNumbers(const int index);
 
 int main()
 {
@@ -44,7 +44,7 @@ int main()
 }
 
 
-int printOddNumber(int range)
+int printOddNumber(const int range)
 {
 	int i;
 	int numberCount = 0;
@@ -146,7 +146,7 @@ int multipleSum(const int range, const int multiple)
 }
 
 
-int fibonacciNumbers(int index)
+int fibonacciNumbers(const int index)
 {
 	int result = 0;
 	int number1 = 1;
