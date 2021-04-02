@@ -43,6 +43,8 @@ int isLeapYear(int year)
 		}
 		return 1;
 	}
+
+	return 0;
 }
 
 void printCalendar(int year, int month)
@@ -71,8 +73,10 @@ void printCalendar(int year, int month)
 		}
 	}	
 
-	dayCount += 365; //Added 0 year day Count	
+	dayCount += 365;
 
+	//dayCount = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
+	
 	for (i = 0; i < month - 1; i++)
 	{
 		dayCount += g_month_day[i];
@@ -80,7 +84,10 @@ void printCalendar(int year, int month)
 
 	daySpace = dayCount % 7;
 
-	printf("일\t월\t화\t수\t목\t금\t토\n");
+	
+
+
+printf("일\t월\t화\t수\t목\t금\t토\n");
 	printf("----------------------------------------------------\n");
 
 	for (i = 0; i < daySpace; i++)
