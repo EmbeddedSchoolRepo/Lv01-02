@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include <time.h>
 #include <assert.h>
-
-#define _CRT_SECURE_NO_WARNINGS
 
 #define START_SALARY_MIN	2400
 #define START_SALARY_MAX	3600
@@ -42,16 +41,16 @@ bool problem1(void)
 {
 	unsigned int salary1, salary2, salary3;
 	float increaseRate1, increaseRate2, increaseRate3;
-	char i = 0;;
+	char i = 0;
 
 	salary1 = START_SALARY_MIN + (rand() % ((START_SALARY_MAX - START_SALARY_MIN) + 1));
 	salary2 = START_SALARY_MIN + (rand() % ((START_SALARY_MAX - START_SALARY_MIN) + 1));
 	salary3 = START_SALARY_MIN + (rand() % ((START_SALARY_MAX - START_SALARY_MIN) + 1));
 
-	printf("******** 1³âÂ÷ ¿ù±Ş ********\n");
-	printf("»ç¿ø 1 : %5d\n", salary1);
-	printf("»ç¿ø 2 : %5d\n", salary2);
-	printf("»ç¿ø 3 : %5d\n", salary3);
+	printf("******** 1ë…„ì°¨ ì›”ê¸‰ ********\n");
+	printf("ì‚¬ì› 1 : %5d\n", salary1);
+	printf("ì‚¬ì› 2 : %5d\n", salary2);
+	printf("ì‚¬ì› 3 : %5d\n", salary3);
 	printf("\n\n");
 
 	for (i = 0; i < YEAR; i++)
@@ -64,16 +63,16 @@ bool problem1(void)
 		salary2 = salary2 + (salary2 * increaseRate2);
 		salary3 = salary3 + (salary3 * increaseRate3);
 
-		printf("********* ¿¬ºÀ ÀÎ»ó·ü *********\n");
-		printf("»ç¿ø 1 : %0.f%%\n", increaseRate1 * 100);
-		printf("»ç¿ø 2 : %0.f%%\n", increaseRate2 * 100);
-		printf("»ç¿ø 3 : %0.f%%\n", increaseRate3 * 100);
+		printf("********* ì—°ë´‰ ì¸ìƒë¥  *********\n");
+		printf("ì‚¬ì› 1 : %0.f%%\n", increaseRate1 * 100);
+		printf("ì‚¬ì› 2 : %0.f%%\n", increaseRate2 * 100);
+		printf("ì‚¬ì› 3 : %0.f%%\n", increaseRate3 * 100);
 
 
-		printf("******** %2d³âÂ÷ ¿ù±Ş ********\n", i + 2);
-		printf("»ç¿ø 1 : %5d\n", salary1);
-		printf("»ç¿ø 2 : %5d\n", salary2);
-		printf("»ç¿ø 3 : %5d\n", salary3);
+		printf("******** %2dë…„ì°¨ ì›”ê¸‰ ********\n", i + 2);
+		printf("ì‚¬ì› 1 : %5d\n", salary1);
+		printf("ì‚¬ì› 2 : %5d\n", salary2);
+		printf("ì‚¬ì› 3 : %5d\n", salary3);
 
 		printf("\n\n");
 	}
@@ -88,21 +87,21 @@ bool problem2(void)
 	dice1 = (rand() % DICE_NUM_MAX) + 1;
 	dice2 = (rand() % DICE_NUM_MAX) + 1;
 
-	printf("ÄÄÇ»ÅÍ ÁÖ»çÀ§ ¼ıÀÚ   : %d\n", dice1);
-	printf("ÇÃ·¹ÀÌ¾î ÁÖ»çÀ§ ¼ıÀÚ : %d\n", dice2);
+	printf("ì»´í“¨í„° ì£¼ì‚¬ìœ„ ìˆ«ì   : %d\n", dice1);
+	printf("í”Œë ˆì´ì–´ ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n", dice2);
 	printf("\n");
 
 	if (dice1 > dice2)
 	{
-		printf("ÄÄÇ»ÅÍ ½Â¸®!!\n");
+		printf("ì»´í“¨í„° ìŠ¹ë¦¬!!\n");
 	}
 	else if (dice1 < dice2)
 	{
-		printf("ÇÃ·¹ÀÌ¾î ½Â¸®!!\n");
+		printf("í”Œë ˆì´ì–´ ìŠ¹ë¦¬!!\n");
 	}
 	else
 	{
-		printf("¹«½ÂºÎ!!\n");
+		printf("ë¬´ìŠ¹ë¶€!!\n");
 	}
 
 	return true;
@@ -125,22 +124,22 @@ bool problem3(void)
 	}
 
 
-	printf("ÄÄÇ»ÅÍ ÁÖ»çÀ§ ¼ıÀÚ   : %d, %d, %d\n", dice1[0], dice1[1], dice1[2]);
-	printf("ÇÃ·¹ÀÌ¾î ÁÖ»çÀ§ ¼ıÀÚ : %d, %d, %d\n", dice2[0], dice2[1], dice2[2]);
+	printf("ì»´í“¨í„° ì£¼ì‚¬ìœ„ ìˆ«ì   : %d, %d, %d\n", dice1[0], dice1[1], dice1[2]);
+	printf("í”Œë ˆì´ì–´ ì£¼ì‚¬ìœ„ ìˆ«ì : %d, %d, %d\n", dice2[0], dice2[1], dice2[2]);
 
 	printf("\n");
 
 	if (dice1_sum > dice2_sum)
 	{
-		printf("ÄÄÇ»ÅÍ ½Â¸®!!\n");
+		printf("ì»´í“¨í„° ìŠ¹ë¦¬!!\n");
 	}
 	else if (dice1_sum < dice2_sum)
 	{
-		printf("ÇÃ·¹ÀÌ¾î ½Â¸®!!\n");
+		printf("í”Œë ˆì´ì–´ ìŠ¹ë¦¬!!\n");
 	}
 	else
 	{
-		printf("¹«½ÂºÎ!!\n");
+		printf("ë¬´ìŠ¹ë¶€!!\n");
 	}
 
 	return true;
@@ -172,9 +171,9 @@ bool problem4(void)
 		dice_sum[2] += dice3[i];
 	}
 
-	printf("ÇÃ·¹ÀÌ¾î1 ÁÖ»çÀ§ ¼ıÀÚ : %d, %d\n", dice1[0], dice1[1]);
-	printf("ÇÃ·¹ÀÌ¾î2 ÁÖ»çÀ§ ¼ıÀÚ : %d, %d\n", dice2[0], dice2[1]);
-	printf("ÇÃ·¹ÀÌ¾î3 ÁÖ»çÀ§ ¼ıÀÚ : %d, %d\n", dice3[0], dice3[1]);
+	printf("í”Œë ˆì´ì–´1 ì£¼ì‚¬ìœ„ ìˆ«ì : %d, %d\n", dice1[0], dice1[1]);
+	printf("í”Œë ˆì´ì–´2 ì£¼ì‚¬ìœ„ ìˆ«ì : %d, %d\n", dice2[0], dice2[1]);
+	printf("í”Œë ˆì´ì–´3 ì£¼ì‚¬ìœ„ ìˆ«ì : %d, %d\n", dice3[0], dice3[1]);
 	printf("\n");
 
 	for (i = 0; i < 3; i++)
@@ -197,15 +196,15 @@ bool problem4(void)
 
 	if (winner_number == 1)
 	{
-		printf("ÇÃ·¹ÀÌ¾î%d ½Â¸®!!\n", winner[0]);
+		printf("í”Œë ˆì´ì–´%dìŠ¹ë¦¬!!\n", winner[0]);
 	}
 	else if (winner_number == 2)
 	{
-		printf("ÇÃ·¹ÀÌ¾î%d, ÇÃ·¹ÀÌ¾î%d ½Â¸®!!\n", winner[0], winner[1]);
+		printf("í”Œë ˆì´ì–´%d, í”Œë ˆì´ì–´%d ìŠ¹ë¦¬!!\n", winner[0], winner[1]);
 	}
 	else
 	{
-		printf("ÇÃ·¹ÀÌ¾î1, ÇÃ·¹ÀÌ¾î2, ÇÃ·¹ÀÌ¾î3 ½Â¸® !!\n");
+		printf("ê³µë™ ìŠ¹ë¦¬ !!\n");
 	}
 
 	return true;
@@ -231,13 +230,13 @@ bool problem5(void)
 	score[1] += dice[1][0];
 	score[2] += dice[2][0];
 
-	printf("--------- 1¹øÂ° ÁÖ»çÀ§ ---------\n");
-	printf("ÇÃ·¹ÀÌ¾î1 ÁÖ»çÀ§ ¼ıÀÚ : %d\n", dice[0][0]);
-	printf("ÇÃ·¹ÀÌ¾î2 ÁÖ»çÀ§ ¼ıÀÚ : %d\n", dice[1][0]);
-	printf("ÇÃ·¹ÀÌ¾î3 ÁÖ»çÀ§ ¼ıÀÚ : %d\n\n", dice[2][0]);
-	printf("ÇÃ·¹ÀÌ¾î1 Á¡¼ö : %d\n", score[0]);
-	printf("ÇÃ·¹ÀÌ¾î2 Á¡¼ö : %d\n", score[1]);
-	printf("ÇÃ·¹ÀÌ¾î3 Á¡¼ö : %d\n\n", score[2]);
+	printf("--------- 1ë²ˆì§¸ ì£¼ì‚¬ìœ„ ---------\n");
+	printf("í”Œë ˆì´ì–´1 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n", dice[0][0]);
+	printf("í”Œë ˆì´ì–´2 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n", dice[1][0]);
+	printf("í”Œë ˆì´ì–´3 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n\n", dice[2][0]);
+	printf("í”Œë ˆì´ì–´1 ì ìˆ˜ : %d\n", score[0]);
+	printf("í”Œë ˆì´ì–´2 ì ìˆ˜ : %d\n", score[1]);
+	printf("í”Œë ˆì´ì–´3 ì ìˆ˜ : %d\n\n", score[2]);
 
 	for (i = 0; i < PLAYER_NUMBER; i++)
 	{
@@ -252,22 +251,22 @@ bool problem5(void)
 		switch (dice[i][1])
 		{
 			case 1: 
-					printf("(player%d)¼ıÀÚ 1ÀÌ ³ª¿Ô½À´Ï´Ù.\n", i + 1);
-					printf("Á¡¼ö¸¦ ´õÇÒ ÇÃ·¹ÀÌ¾î ÀÔ·Â :");
-					scanf_s("%d", &selected_player);
+					printf("(player%d)ìˆ«ì 1ì´ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", i + 1);
+					printf("ì ìˆ˜ë¥¼ ë”í•  í”Œë ˆì´ì–´ ì…ë ¥ :");
+					scanf("%d", &selected_player);
 					while (selected_player <= 0 || selected_player > 3)
 					{
-						printf("Á¡¼ö¸¦ ´õÇÒ ÇÃ·¹ÀÌ¾î ÀÔ·Â :");
-						scanf_s("%d", &selected_player);
+						printf("ì ìˆ˜ë¥¼ ë”í•  í”Œë ˆì´ì–´ ì…ë ¥ :");
+						scanf("%d", &selected_player);
 					}
 					score[selected_player - 1] = score[selected_player - 1] + 3;
 
-					printf("Á¡¼ö¸¦ ±ğÀ» ÇÃ·¹ÀÌ¾î ÀÔ·Â :");
-					scanf_s("%d", &selected_player);
+					printf("ì ìˆ˜ë¥¼ ê¹ì„ í”Œë ˆì´ì–´ ì…ë ¥ :");
+					scanf("%d", &selected_player);
 					while (selected_player <= 0 || selected_player > 3)
 					{
-						printf("Á¡¼ö¸¦ ±ğÀ» ÇÃ·¹ÀÌ¾î ÀÔ·Â :");
-						scanf_s("%d", &selected_player);
+						printf("ì ìˆ˜ë¥¼ ê¹ì„ í”Œë ˆì´ì–´ ì…ë ¥ :");
+						scanf("%d", &selected_player);
 					}
 
 					printf("\n");
@@ -296,14 +295,14 @@ bool problem5(void)
 
 	}
 
-	printf("--------- 2¹øÂ° ÁÖ»çÀ§ ¼ıÀÚ ---------\n");
+	printf("--------- 2ë²ˆì§¸ ì£¼ì‚¬ìœ„ ìˆ«ì ---------\n");
 
-	printf("ÇÃ·¹ÀÌ¾î1 ÁÖ»çÀ§ ¼ıÀÚ : %d\n", dice[0][1]);
-	printf("ÇÃ·¹ÀÌ¾î2 ÁÖ»çÀ§ ¼ıÀÚ : %d\n", dice[1][1]);
-	printf("ÇÃ·¹ÀÌ¾î3 ÁÖ»çÀ§ ¼ıÀÚ : %d\n\n", dice[2][1]);
-	printf("ÇÃ·¹ÀÌ¾î1 Á¡¼ö : %d\n", score[0]);
-	printf("ÇÃ·¹ÀÌ¾î2 Á¡¼ö : %d\n", score[1]);
-	printf("ÇÃ·¹ÀÌ¾î3 Á¡¼ö : %d\n\n", score[2]);
+	printf("í”Œë ˆì´ì–´1 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n", dice[0][1]);
+	printf("í”Œë ˆì´ì–´2 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n", dice[1][1]);
+	printf("í”Œë ˆì´ì–´3 ì£¼ì‚¬ìœ„ ìˆ«ì : %d\n\n", dice[2][1]);
+	printf("í”Œë ˆì´ì–´1 ì ìˆ˜ : %d\n", score[0]);
+	printf("í”Œë ˆì´ì–´2 ì ìˆ˜ : %d\n", score[1]);
+	printf("í”Œë ˆì´ì–´3 ì ìˆ˜ : %d\n\n", score[2]);
 
 	for (i = 0; i < 3; i++)
 	{
@@ -325,15 +324,15 @@ bool problem5(void)
 
 	if (winner_number == 1)
 	{
-		printf("ÇÃ·¹ÀÌ¾î%d ½Â¸®!!\n", winner[0]);
+		printf("í”Œë ˆì´ì–´%d ìŠ¹ë¦¬!!\n", winner[0]);
 	}
 	else if (winner_number == 2)
 	{
-		printf("ÇÃ·¹ÀÌ¾î%d, ÇÃ·¹ÀÌ¾î%d ½Â¸®!!\n", winner[0], winner[1]);
+		printf("í”Œë ˆì´ì–´%d, í”Œë ˆì´ì–´%d ìŠ¹ë¦¬!!\n", winner[0], winner[1]);
 	}
 	else
 	{
-		printf("ÇÃ·¹ÀÌ¾î1, ÇÃ·¹ÀÌ¾î2, ÇÃ·¹ÀÌ¾î3 ½Â¸® !!\n");
+		printf("ê³µë™ ìŠ¹ë¦¬!!\n");
 	}
 
 	return true;
