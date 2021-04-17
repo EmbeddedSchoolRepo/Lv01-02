@@ -121,5 +121,13 @@ int main(void)
 	printf("res = %f\n", dot_product(vecU, vecV, len_U, len_V));
 	printf("res = %f\n", dot_product(vectorA, vectorB, len_A, len_B));
 
+	// malloc()과 free()는 한 쌍에 해당한다.
+	// m이 할당이라면 f는 해제에 해당한다.
+	// 운영체제가 자동으로 하는 편이지만
+	// 빈번하게 발생하다보면 운영체제가 처리하지 못해
+	// 지속적으로 메모리 릭이 발생하게 되고 종극에 서버가 뻗어
+	// 회사의 손해가 막심해지게 된다.
+	free(vectorR);
+
 	return 0;
 }
