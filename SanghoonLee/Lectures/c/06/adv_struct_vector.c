@@ -18,6 +18,8 @@ void init_vector(vec *v)
 
 	for (i = 0; i < VEC_DIMENSION; i++)
 	{
+		// 어떤 수를 7로 나눈 나머지는 ? 0 ~ 6
+		// 위 범위 전체에 + 1을 하면 ? 1 ~ 7
 		v->vector[i] = rand() % 7 + 1;
 	}
 
