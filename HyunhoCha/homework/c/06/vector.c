@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define VECTOR_SIZE 3
+
 void init_vector(int *vector, int len)
 {
 	int i;
@@ -18,7 +20,7 @@ void print_vector(int *vector, int len)
 
 	for(i = 0; i < len; i++)
 	{
-		printf("%2d", vector[i]);
+		printf("%4d", vector[i]);
 	}
 
 	printf("\n");
@@ -42,6 +44,20 @@ int *add_vector(int *vec_A, int *vec_B, int len_A, int len_B)
 	}
 
 	return tmp;
+}
+
+
+int *crossproduct(int *vectorA, int *vectorB, int len_A, int len_B)
+{
+	int i;
+    int *tmp = (int*)malloc(sizeof(int*) * VECTOR_SIZE);
+  
+  
+    tmp[0] = vectorA[1] * vectorB[2] - vectorA[2] * vectorB[1];
+    tmp[1] = vectorA[2] * vectorB[0] - vectorA[0] * vectorB[2];
+    tmp[2] = vectorA[0] * vectorB[1] - vectorA[1] * vectorB[0];
+	
+    return tmp;
 }
 
 float dot_product(int *vec_A, int *vec_B, int len_A, int len_B)
@@ -71,8 +87,9 @@ int main(void)
 	int vectorB[3] = { 0 };
 	int vectorU[3] = { 0 };
 	int vectorV[3] = { 0 };
-
+	float result;
 	int *vectorR;
+	int *crossvector;
 
 	len_A = sizeof(vectorA) / sizeof(int);
 	len_B = sizeof(vectorB) / sizeof(int);
@@ -89,15 +106,24 @@ int main(void)
 	printf("vector B: \n");
 	print_vector(vectorB, len_B);
 
-	vectorR = add_vector(vectorA, vectorB, len_A, len_B);
-	print_vector(vectorR, len_A);
+	crossvector = crossproduct(vectorA, vectorB, len_A, len_B);
+	printf("A cross B : \n");
+	print_vector(crossvector, len_A);
+	
+	result = dot_product(vectorA, crossvector, len_A, len_B);
+	printf("A dot corssvector : %f\n", result);
 
-	printf("Inner projuct:\n");
-	printf("두 개의 벡터가 서로 수직한가 ?\n");
-	printf("res = %f\n", dot_product(vectorU, vectorV, len_U, len_V));
+	result = dot_product(vectorB, crossvector, len_A, len_B);
+	printf("B dot corssvector : %f\n", result);
+	//vectorR = add_vector(vectorA, vectorB, len_A, len_B);
+	//print_vector(vectorR, len_A);
+
+	//printf("Inner projuct:\n");
+	//printf("두 개의 벡터가 서로 수직한가 ?\n");
+	//printf("res = %f\n", dot_product(vectorU, vectorV, len_U, len_V));
 
 
-	free(vectorR);
+	free(crossvector);
 
 	return 0;
 }
