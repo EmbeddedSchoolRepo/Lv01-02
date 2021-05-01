@@ -121,6 +121,49 @@ FTDI 문제일 가능성이 있다.
 8. Finish
 ```
 
+## AVR 코드 작성해보기
+
+```
+#include <avr/io.h>
+
+#define F_CPU           16000000L
+#include <util/delay.h>
+
+int main(void)
+{
+    DDRB = 0x20;
+
+    while(1)
+    {
+        PORTB = 0x00;
+        _delay_ms(500);
+        PORTB = 0x20;
+        _delay_ms(500);
+    }
+
+    return 0;
+}
+```
+
+톱니 버튼을 누르면 build가 진행된다.  
+특별한 문제가 없다면 error가 0으로 나온다.  
+이제 실제 프로젝트 디렉토리로 이동해보자!  
+
+cd bin/Release  
+ls  
+
+여기에 *.hex 파일이 있는지 확인하도록 한다.  
+
+## Build 완료된 AVR 코드 다운로드하기
+
+```
+1. 보드의 전원을 내린다.
+2. 먼저 구동시킬 회로도를 구성한다.
+3. 회로 구성이 완료되었다면 MKII ISP와 전원을 연결한다.
+4. ~~~/bin/Release 디렉토리에 있는지 위치를 확인하고
+   sudo avrdude -c avrisp2 -p m328p -U flash:w:blink_test.hex
+5. 
+```
 
 
 
