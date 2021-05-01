@@ -46,6 +46,23 @@ tar zxvf dfu-util-0.10.tar.gz
 2. uno를 검색하고 Installed가 보이지 않는다면 Install을 클릭하여 설치한다.
 ```
 
+## 구동 테스트를 하기 위해 아래 코드를 넣는다.
+
+```c
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+```
+
 
 
 /etc/apt/sources.list <<<
