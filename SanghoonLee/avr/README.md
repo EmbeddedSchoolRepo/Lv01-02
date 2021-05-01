@@ -116,7 +116,8 @@ FTDI 문제일 가능성이 있다.
    Next
 6. Uncheck: Create "Debug" configuration
    Next
-7. Uncheck: Create Fuse, Lock, Signature ~~~
+7. Please choose a processor for this project: atmega328p
+   Uncheck: Create Fuse, Lock, Signature ~~~
 8. Finish
 ```
 
