@@ -63,6 +63,31 @@ void loop() {
 }
 ```
 
+## STK500 문제 해결이 필요함
+
+```
+잠시 보류
+```
+
+## Linux에서 AVR 코딩을 하기 위한 기본 설정
+
+```
+1. sudo apt-get update
+2. sudo apt-get install codeblocks
+```
+
+## Linux 용 시리얼 프로그래머 설치
+
+```
+1. sudo add-apt-repository ppa:pmjdebruijn/avrdude-release
+2. sudo apt-get update
+3. sudo apt-get install libc6-dev-i386
+4. sudo apt-get install binutils-avr gcc-avr avr-libc avrdude libc6-dev-i386
+```
+
+
+
+
 
 
 /etc/apt/sources.list <<<
