@@ -30,3 +30,15 @@ https://sourceforge.net/projects/dfu-util/files/latest/download
 
 tar zxvf dfu-util-0.10.tar.gz  
 
+## dfu-util 설치를 시작한다.
+
+```
+1. cd dfu-util
+2. ./configure
+3. make
+4. make install
+```
+
+
+
+/etc/apt/sources.list <<<
