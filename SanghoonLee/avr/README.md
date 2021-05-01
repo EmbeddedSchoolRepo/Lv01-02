@@ -85,7 +85,12 @@ void loop() {
 4. sudo apt-get install binutils-avr gcc-avr avr-libc avrdude libc6-dev-i386
 ```
 
+## 설치 확인
 
+```
+1. codeblocks
+2. avrdude
+```
 
 
 
