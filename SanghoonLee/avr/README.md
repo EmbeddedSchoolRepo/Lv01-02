@@ -39,6 +39,13 @@ tar zxvf dfu-util-0.10.tar.gz
 4. make install
 ```
 
+## Arduino 프로그램을 연다.
+
+```
+1. Tool -> Board -> Board Manager를 연다.
+2. uno를 검색하고 Installed가 보이지 않는다면 Install을 클릭하여 설치한다.
+```
+
 
 
 /etc/apt/sources.list <<<
