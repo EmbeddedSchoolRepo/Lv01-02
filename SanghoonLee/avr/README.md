@@ -66,7 +66,17 @@ void loop() {
 ## STK500 문제 해결이 필요함
 
 ```
-잠시 보류
+FTDI 문제일 가능성이 있다.
+
+1. https://ftdichip.com/drivers/d2xx-drivers/ 이동
+2. x64 버전의 리눅스 전용을 다운 받는다.
+3. 적정한 위치로 이동시키고 tar xvf libftd2xx-x86_64-1.4.22.tgz로 압축 해제
+4. sudo cp release/build/lib* /usr/local/lib/
+5. cd /usr/local/lib
+6. ls libftd*
+7. sudo ln -s libftd2xx.so.1.4.22 libftd2xx.so
+8. sudo chmod 0755 libftd2xx.so.1.4.22
+9. 
 ```
 
 ## Linux에서 AVR 코딩을 하기 위한 기본 설정
@@ -90,6 +100,24 @@ void loop() {
 ```
 1. codeblocks
 2. avrdude
+```
+
+## 기본 예제 돌려보기
+
+```
+1. 적당한 위치로 이동한다.
+2. mkdir -p 적당한위치/proj/avr
+3. Codeblock에서 File -> New -> Project -> AVR Project
+4. Next
+5. Project title: blink
+   Folder to create project in: 위치(위에서 잡은 위치로 지정하는 것이 좋음)
+   project filename: blink.cbp
+   Resulting filename: ~~~
+   Next
+6. Uncheck: Create "Debug" configuration
+   Next
+7. Uncheck: Create Fuse, Lock, Signature ~~~
+8. Finish
 ```
 
 
