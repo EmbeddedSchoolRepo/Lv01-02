@@ -30,7 +30,7 @@ int main(void)
 	printf("전화번호를 입력 하세요. ");
 	scanf("%d", &phone);
 
-//	printf("당신의 이름은 %s \n 거주지는 %s \n 나이는 %d \n 전화번호는 0%d 입니다.\n",name, address, age, phone);
+	printf("당신의 이름은 %s \n 거주지는 %s \n 나이는 %d \n 전화번호는 0%d 입니다.\n",name, address, age, phone);
 	
 		
 
