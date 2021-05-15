@@ -9,7 +9,7 @@ int main(void)
 
 	dice = rand() % 6 + 1;
 
-	printf("%d\n", dice);
+	printf("주사위의 눈: %d\n", dice);
 
 	return 0;
 }
