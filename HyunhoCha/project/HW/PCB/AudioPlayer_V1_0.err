@@ -1,0 +1,132 @@
+PCB Net List Errors Report - AudioPlayer_V1_0.sch - Fri Aug 20 14:08:16 2021
+-----------------------------------------------------------------------------
+Design to Library Part Consistency Check
+----------------------------------------
+Library Part Type QFP-64P(0.5) has no decal assigned - not able to check following parts:
+ U1.
+Library Part Type HEADER1X9(2.54) has no decal assigned - not able to check following parts:
+ J2.
+Library Part Type HEADER1X5(2.54) has no decal assigned - not able to check following parts:
+ J3.
+Part Type BEAD_600R_350MA_0603 not found in Library - not able to check following parts:
+ L1 L2.
+Library Part Type VS1003 has no decal assigned - not able to check following parts:
+ U3.
+Library Part Type STEREO_JACK(3.5MM) has no decal assigned - not able to check following parts:
+ U6 U7.
+Part Type FT232R_3 not found in Library - not able to check following parts:
+ U8.
+Part Type R not found in Library - not able to check following parts:
+ R43 R44.
+Part Type CAP_NP not found in Library - not able to check following parts:
+ C28.
+Part Type SW_PUSHBUTTON_1 not found in Library - not able to check following parts:
+ SW2.
+Part Type CON2_0 not found in Library - not able to check following parts:
+ J18.
+Part Type 330-1/16W-5%-0603 not found in Library - not able to check following parts:
+ R17.
+
+Single/Zero Pin Net Warnings
+----------------------------
+Net XOCS/BSYNC has less than two pins in PCB net list file.
+Net XOSC/BSYNC has less than two pins in PCB net list file.
+Net SPI_0_CS1 has less than two pins in PCB net list file.
+Net SPI_0_CS2 has less than two pins in PCB net list file.
+Net SPI_0_CS3 has less than two pins in PCB net list file.
+Net SPI_0_CS0 has less than two pins in PCB net list file.
+Net +5V_USB has less than two pins in PCB net list file.
+
+Schematic Connectivity Errors
+-----------------------------
+
+Dangling Connections with a Net Name
+
+USB_DM
+06.EXT_IO_B  X5050  Y6950 
+06.EXT_IO_B  X10150 Y9500 
+
+USB_DP
+06.EXT_IO_B  X5050  Y6750 
+06.EXT_IO_B  X10150 Y9400 
+
+Power or Ground Symbols used with wrong Net Name
+
++2V5
+03.POWER     X6100  Y5500  - Power  Symbol used for net: +5V
+03.POWER     X12100 Y5450  - Power  Symbol used for net: +5V
+04.AUDIO     X11500 Y7850  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y8450  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y7850  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y2750  - Power  Symbol used for net: +5V
+
++2V8
+04.AUDIO     X11500 Y5750  - Power  Symbol used for net: +5V
+04.AUDIO     X11500 Y4250  - Power  Symbol used for net: +5V
+04.AUDIO     X5600  Y10250 - Power  Symbol used for net: +5V
+04.AUDIO     X11500 Y3650  - Power  Symbol used for net: +5V
+
++3V3
+02.MCU-ATSAMD21J16B X10600 Y8350  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X11050 Y5350  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X5500  Y6750  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X7650  Y4300  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X2150  Y2150  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X8450  Y9250  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X2550  Y2150  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X2900  Y2150  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X3250  Y2150  - Power  Symbol used for net: +5V
+03.POWER     X11850 Y9350  - Power  Symbol used for net: +5V
+03.POWER     X13500 Y9150  - Power  Symbol used for net: +5V
+05.EXT_IO_A  X2800  Y4350  - Power  Symbol used for net: +5V
+05.EXT_IO_A  X5950  Y3600  - Power  Symbol used for net: +5V
+06.EXT_IO_B  X2610  Y8650  - Power  Symbol used for net: +5V
+06.EXT_IO_B  X4790  Y7210  - Power  Symbol used for net: +5V
+06.EXT_IO_B  X5150  Y9710  - Power  Symbol used for net: +5V
+06.EXT_IO_B  X2470  Y6950  - Power  Symbol used for net: +5V
+06.EXT_IO_B  X4000  Y5220  - Power  Symbol used for net: +5V
+
++3V3A
+02.MCU-ATSAMD21J16B X4050  Y2150  - Power  Symbol used for net: +5V
+02.MCU-ATSAMD21J16B X4450  Y2150  - Power  Symbol used for net: +5V
+03.POWER     X15000 Y9150  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y8150  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y5750  - Power  Symbol used for net: +5V
+04.AUDIO     X5800  Y4250  - Power  Symbol used for net: +5V
+04.AUDIO     X10800 Y9350  - Power  Symbol used for net: +5V
+
++5V_USB
+06.EXT_IO_B  X12050 Y9800  - Power  Symbol used for net: +5V
+
+VDDCORE
+02.MCU-ATSAMD21J16B X8650  Y9450  - Power  Symbol used for net: +5V
+
+Subnets with Missing Off-Page Reference
+
+USB_DM
+06.EXT_IO_B  X4150  Y7350  - Pin: U8.7
+06.EXT_IO_B  X12150 Y9500  - Pin: J18.2
+
+USB_DP
+06.EXT_IO_B  X3950  Y7350  - Pin: U8.6
+06.EXT_IO_B  X12150 Y9400  - Pin: J18.3
+
+Subnets with Off-Page Reference to no other Subnet
+
+SPI_0_CS0
+04.AUDIO     X6300  Y3050 
+
+SPI_0_CS1
+05.EXT_IO_A  X5050  Y8300 
+
+SPI_0_CS2
+05.EXT_IO_A  X8850  Y8650 
+
+SPI_0_CS3
+05.EXT_IO_A  X8850  Y7850 
+
+XOCS/BSYNC
+04.AUDIO     X6500  Y6050 
+
+XOSC/BSYNC
+02.MCU-ATSAMD21J16B X11450 Y7350 
